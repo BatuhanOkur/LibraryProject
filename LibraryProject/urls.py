@@ -18,8 +18,7 @@ from django.contrib import admin
 from django.urls import path, re_path
 from django.conf.urls import include
 from rest_framework import routers
-from LibraryApp.entities.author.view.AuthorView import AuthorViewSet
-from LibraryApp.entities.book.view.BookView import BookViewSet
+from libraryapp.views import BookViewSet,AuthorViewSet
 
 router = routers.DefaultRouter()
 router.register(r'authors', AuthorViewSet)

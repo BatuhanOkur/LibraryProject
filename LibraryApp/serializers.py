@@ -1,5 +1,11 @@
-from LibraryApp.entities.book.model.BookModel import Book
+from libraryapp.models import Author, Book
 from rest_framework import serializers
+
+class AuthorSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=Author
+        fields=('firstName','secondName', 'birthDate')
+
 
 class BookSerializer(serializers.ModelSerializer):
     class Meta:
